@@ -1,0 +1,756 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* -------------------------------- fonts -------------------------------------------- */
+@font-face {
+    font-family: 'Europa';
+    src: url('../fonts/Europa-LightItalic.eot');
+    src: url('../fonts/Europa-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Europa-LightItalic.woff2') format('woff2'),
+        url('../fonts/Europa-LightItalic.woff') format('woff'),
+        url('../fonts/Europa-LightItalic.ttf') format('truetype'),
+        url('../fonts/Europa-LightItalic.svg#Europa-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Europa';
+    src: url('../fonts/Europa-Light.eot');
+    src: url('../fonts/Europa-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Europa-Light.woff2') format('woff2'),
+        url('../fonts/Europa-Light.woff') format('woff'),
+        url('../fonts/Europa-Light.ttf') format('truetype'),
+        url('../fonts/Europa-Light.svg#Europa-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Europa';
+    src: url('../fonts/Europa-Regular.eot');
+    src: url('../fonts/Europa-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Europa-Regular.woff2') format('woff2'),
+        url('../fonts/Europa-Regular.woff') format('woff'),
+        url('../fonts/Europa-Regular.ttf') format('truetype'),
+        url('../fonts/Europa-Regular.svg#Europa-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*---------------------------Genrael Clases---------------------------------------*/
+
+:root{
+	--main-color: #ebeced;
+	--btn-color: #005a9c;
+	--lightblue-color: #00adef;
+	--hover-color: #00adef;
+	--font-light:  300;
+	--font-regular:  normal;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Europa';
+}
+body{
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+.container {
+	width: auto;
+	max-width: 1920px;
+	margin: auto;
+	padding: 0px 67px;
+}
+a{
+	text-decoration: none;
+}
+a:focus, a:hover {
+	color: #0076b8;
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+sup{
+	font-size: 16px;
+}
+.hr{
+	margin: 50px 0 !important;
+}
+.sticky-top {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1071;
+}
+.row-reverse {
+	flex-direction: row-reverse;
+}
+.row.no-padding {
+	margin-right: 0;
+	margin-left: 0;
+}
+.row.no-padding > [class^="col-"], .row.no-padding > [class*=" col-"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* ------------------- Search-Header section start ---------------------- */
+
+#top-header{
+	margin-top: 43px;
+}
+.top-search-nav {
+	position: relative;
+	background: var(--main-color);
+	border-radius: 30px 0 0 30px;
+	padding: 2px 20px 7px 35px;
+	margin-right: -6px;
+}
+.top-search-nav::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 300%;
+	background: var(--main-color);
+	height: 33px;
+	border-radius: 0 30px 30px 0;
+}
+.top-nav li {
+	margin-right: 28px;
+}
+.top-nav li:last-child{
+	margin-right: 0;
+}
+.top-nav li:last-child .fa-search{
+	font-size: 9px;
+}
+.top-nav li a{
+	color: #27241f;
+	font-size: .75vw;
+	font-weight: var(--font-light);
+	transition: all .5s linear;
+	position: relative;
+	top: 0;
+	left: 0;
+	display: inline-block;
+}
+.top-nav li a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	opacity: 0;
+	transition: all .5s linear;
+	display: inline-block;
+	background: var(--btn-color);
+	height: 2px;
+	width: 0%;
+	margin: auto;
+}
+.top-nav li a:hover:after{
+	opacity: 1;
+	width: 100%;
+}
+/* ------------------- Header section start ---------------------- */
+
+
+
+#header{
+	margin: 12px 0 50px 0;
+	max-width: 100%;
+}
+.logo img {
+	max-width: 10.2vw;
+	max-height: 63px;
+}
+#header .nav{
+	padding-left: 2.6vw;
+}
+.navigation-ul li{
+	list-style: none;
+	margin-right: 2.3vw;
+	position: relative;
+	top: 10px;
+}
+.navigation-ul li:last-child{
+	margin-right: 0;
+}
+.navigation-ul li a{
+	color: #000;
+	transition: all .5s linear;
+	font-size: 1.0vw;
+	font-weight: var(--font-regular);
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+
+}
+.navigation-ul li a:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	opacity: 0;
+	display: inline-block;
+	background: var(--btn-color);
+	height: 2px;
+	transition: all .2s  ease-out;
+	width: 0%;
+	margin: auto;
+}
+.navigation-ul li a:hover{
+	color: var(--btn-color);
+}
+.navigation-ul li a:hover:after {
+	opacity: 1;
+	width: 100%;
+}
+.img-wrapper{
+	position: relative;
+}
+
+.img-wrapper img{
+	width: 100%;
+	height: auto;
+}
+
+
+/* ------------------- Banner section start ---------------------- */
+
+
+.banner{
+	background:#d9f1fc url('../images/getz-home-banner-img.png') no-repeat;
+	background-position: right bottom;
+	background-size: 55% 85%;
+	border-radius: 10px !important;
+	border-bottom-right-radius: 20px !important;
+}
+.banner-text{
+	padding-top: 135px;
+	padding-bottom: 150px;
+}
+.banner .text-section{
+	left: 0 !important;
+	margin-left: 85px;
+
+}
+.banner .text-section h1{
+	margin-bottom: 37px;
+	font-size: 4.5vw;
+	font-weight: var(--font-light);
+}
+.banner .text-section p {
+	margin-bottom: 18px;
+	font-size: 0.9vw !important;
+	font-weight: var(--font-light);
+}
+.banner .text-section .third-banner-p{
+	margin-top: 50px;
+}
+.banner .banner-text .banner-second-p-pad{
+	padding-bottom: 38px;
+}
+.banner .text-section a{
+	border-radius: 30px !important;
+	background-color: var(--btn-color);
+	color: #ffff !important;
+	transition: all .3s linear;
+}
+.banner .text-section a:hover{
+	background-color: #ffff;
+	color: var(--btn-color) !important;
+}
+.banner .text-section .second-banner-btn{
+	margin-top: 30px !important;
+}
+.banner .text-section .third-banner-btn{
+	margin-top: 130px !important;
+}
+
+/* ------------------- Getz-home-Artical-1 ---------------------- */
+
+.getz-home-artical-1 .img-wrapper{
+	width: auto;
+	padding-right: 85px;
+}
+.getz-home-artical-1 h4{
+	font-size: 1.9vw;
+	font-weight: var(--font-light);
+	padding-bottom: 30px;
+	padding-top: 10px;
+	line-height: 1.2;
+}
+.pad-bottom{
+	padding-bottom: 100px;
+}
+.getz-home-artical-1 p{
+	font-size: 1vw;
+	padding-right: 65px;
+	font-weight: var(--font-light);
+}
+.getz-home-artical-1 .artical-box{
+	border: 1px solid #e1e2e3;
+	border-radius: 10px;
+	padding: 30px;
+}
+.getz-home-artical-1 .text-wrapper h5{
+	color: var(--lightblue-color);
+	font-size: 2vw;
+	font-weight: var(--font-regular);
+	margin-bottom: 0;
+}
+.getz-home-artical-1 .text-wrapper h5:nth-of-type(2){
+	padding: 35px 0 0 0;
+}
+.getz-home-artical-1 .text-wrapper span{
+	color: #808285;
+	font-weight: var(--font-light);
+}
+
+
+/* ------------------- Getz-home-Artical-2 ---------------------- */
+
+
+
+.getz-home-artical-2 .container .row{
+	background: #f7f7f7;
+	border-radius: 10px;
+	margin: 0;
+	overflow: hidden;
+}
+.getz-home-artical-2 .container .text-wrapper {
+	padding: 80px 0 65px 45px !important;
+}
+html .getz-home-artical-2 .img-wrapper-1{
+	padding-right: 65px !important;
+	padding-left: 68px !important;
+	margin-top: -8px;
+}
+html .getz-home-artical-2 .img-wrapper-2 {
+	padding-right: 65px !important;
+	padding-left: 255px !important;
+	padding-top: 25px;
+}
+.getz-home-artical-2 .img-wrapper-3{
+	position: relative;
+	left: -58px;
+	top: 10px;
+}
+.getz-home-artical-2 strong{
+	color: var(--lightblue-color);
+	font-size: 3vw;
+	font-weight: var(--font-regular);
+}
+.getz-home-artical-2 span{
+	font-size: 2.3vw;
+	font-weight: var(--font-light);
+}
+
+/* ------------------- Internation-oprators section start ---------------------- */
+.international-oprations-section h2{
+	font-size: 4vw;
+	font-weight: var(--font-light);
+}
+html .international-oprations-section p{
+	font-size: 1.4vw !important;
+	font-weight: var(--font-light);
+}
+
+
+/* ------------------- Countries section start ---------------------- */
+.countries ul{
+	padding-right: 4.6vw;
+}
+html .countries ul li h3{
+	font-size: 1.5vw;
+	font-weight: var(--font-light);
+	color: #000;
+}
+html .countries ul li h3 a{
+	font-weight: var(--font-light);
+	color: #000;
+	opacity: .7;
+}
+html .countries ul li p{
+	margin-bottom: 0;
+	font-weight: var(--font-light);
+}
+html .countries ul li p a{
+	color: #000;
+	opacity: .5;
+	font-size: 1.2vw;
+	font-weight: var(--font-light);
+	transition: all .5s linear;
+}
+html .countries ul li p a:hover{
+	color: var(--hover-color);
+	text-decoration: underline;
+}
+html .countries ul li p a.active{
+	color: var(--hover-color);
+	text-decoration: underline;
+}
+
+
+/* ------------------- Therapeutic Segments section ---------------------- */
+
+.therapeutic-segments-new h2{
+	font-size: 4vw;
+	font-weight: var(--font-light);
+}
+.therapeutic-segments-new p{
+	font-size: 1.5vw;
+	font-weight: var(--font-light);
+}
+.therapeutic-segments-new ul li h5 a{
+	margin-bottom: -10px !important;
+	color: #605b58;
+	margin-right: 30px;
+	position: relative;
+	font-weight: var(--font-light);
+	display: inline-block;
+	font-size: 15.5px;
+}
+.therapeutic-segments-new ul li h5 a::after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 33px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	width: 0%;
+	opacity: 0;
+	background: var(--btn-color);
+	transition: all .5s ease-in-out;
+}
+.therapeutic-segments-new ul li h5 a:hover,
+.therapeutic-segments-new ul li h5 a:hover:after{
+	color: var(--btn-color);
+	width: 94%;
+	opacity: 1;
+}
+.therapeutic-segments-new ul li h5 a.active{
+	color: var(--btn-color);
+}
+.therapeutic-segments-new ul li h5 a.active::after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 33px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	width: 99%;
+	opacity: 1;
+	background: var(--btn-color);
+	transition: all .5s ease-in-out;
+}
+.therapeutic-segments-new .graphic-wrapper{
+	border: 1px solid #929295;
+	border-radius: 100%;
+	padding: 20px;
+	height: 150px;
+	width: 150px;
+}
+.therapeutic-segments-bottom-row  .row.mb-4{
+ 	padding-top: 20px;
+}
+.therapeutic-segments-bottom-row  .content-wrapper .heading h6{
+	font-weight: var(--font-light);
+}
+
+
+.therapeutic-segments-bottom-row  .heading .text-primary{
+	color: var(--btn-color) !important;
+}
+
+
+/* ------------------- Our-Approach section ---------------------- */
+
+.our-approach-section .our-approach-pad-bottom{
+	padding-bottom: 50px;
+}
+.approach-top-row h1{
+	font-size: 3vw;
+	font-weight: var(--font-light);
+}
+.approach-top-row p{
+	font-size: 1.5vw;
+	line-height: 1.2;
+	font-weight: var(--font-light);
+}
+.left-img-wrapper img{
+	max-height: 89.5vh;
+}
+.our-approach-section .our-approach-content .img-wrapper{
+	width: auto;
+}
+.our-approach-section .our-approach-content .testinomial-text-left{
+	padding-top: 70px;
+	padding-left: 100px;
+	padding-right: 17vw;
+	padding-bottom: 0;
+
+}
+.our-approach-section .our-approach-content .testinomial-text-right {
+	padding-top: 55px;
+	padding-left: 5vw;
+	padding-right: 16vw;
+	padding-bottom: 0;
+}
+.our-approach-section .our-approach-content .testinomial-text h2{
+	color: #221f1f;
+	font-size: 2vw;
+	font-weight: var(--font-light);
+}
+
+.our-approach-section .our-approach-content .testinomial-text p{
+	margin: 40px 0 30px 0;
+	font-size: 1.2vw;
+	font-weight: var(--font-light);
+	line-height: 1.3;
+	color: #000;
+	opacity: .6;
+}
+.our-approach-second-btn{
+	color: var(--lightblue-color) !important;
+	display: inline-block !important;
+	border: 1px solid var(--lightblue-color);
+	outline: none;
+	border-radius: 50px !important;
+	padding: 0 34px;
+	margin: 0;
+	max-height: 40px;
+	font-size: 0.9vw !important;
+	font-weight: var(--font-regular);
+	line-height: 2.5;
+	transition: all .3s linear;
+}
+.our-approach-second-btn:hover{
+	background-color: var(--btn-color);
+	color: #ffff !important;
+}
+.our-approach-section .our-approach-content .testinomial-text-last{
+	padding-top: 100px;
+}
+.our-approach-section .our-approach-content .testinomial-text-last p{
+	font-size: 1.7vw !important;
+	font-weight: var(--font-light);
+}
+
+/* ------------------- Inside-Getz-Pharma section start ---------------------- */
+
+
+.inside-getz-pharma .container .row{
+	background: var(--btn-color) url('../images/inside-getz-img.png') no-repeat;
+	background-position: bottom right;
+	background-size: 40% 100%;	
+	border-radius: 10px;
+	padding: 100px;
+}
+.inside-getz-content{
+	padding-right: 80px;
+}
+.inside-getz-content h2{
+	color: #ffff !important;
+	font-size: 3.6vw !important;
+	font-weight: var(--font-regular);
+	padding-top: 15px;
+}
+.inside-getz-content p{
+	font-size: 1vw;
+	line-height: 26px;
+	padding: 50px 0 35px 0;
+	font-weight: var(--font-light);
+}
+.inside-getz-content a{
+	background: #ffff;
+	padding: 2px 35px;
+	color: var(--btn-color) !important;
+}
+
+
+/* ------------------- Our-value section start ---------------------- */
+
+#our-values-section {
+	padding-top: 0 !important;
+}
+.our-values-section-heading h2{
+	font-size: 4vw;
+	margin-bottom: 20px;
+	font-weight: var(--font-light);
+}
+.our-value-box-heading h2{
+	color: var(--btn-color);
+	font-size: 2.3vw;
+	font-weight: var(--font-light);
+	margin-bottom: 20px;
+}
+.our-value-box-heading img{
+	color: var(--lightblue-color);
+}
+.our-values-section-text{
+	line-height: 1.3;
+}
+.our-values-section-text p{
+	font-size: 1.5vw !important;
+	font-weight: var(--font-light);
+	color: #6c6d71;
+	padding-right: 24px;
+}
+.our-values-section-boxes .values-box{
+	border: 1px solid #e2e3e4;
+	border-radius: 20px;
+	padding: 25px 30px;
+	height: 100%;
+	margin: 0 -7px;
+}
+.our-values-section-img{
+	margin: 50px 0;
+}
+.our-values-section-img img {
+	width: 40% !important;
+	height: auto !important;
+}
+.getz-heart-img{
+	margin-top: 100px;
+}
+/* ------------------- Career section start ---------------------- */
+
+
+.careers-text-1 h2{
+	font-size: 4vw;
+	margin-bottom: 70px;
+	font-weight: var(--font-light);
+}
+.careers-text-1 p{
+	font-size: 1.6vw;
+	font-weight: var(--font-light);
+	padding-right: 50px !important;
+}
+.career-text-2{
+	padding: 70px 0;
+}
+.career-text-2 h2{
+	font-size: 2.6vw;
+	font-weight: var(--font-light);
+	padding-right: 100px;
+	/* opacity: .8; */
+	margin-bottom: 70px;
+	line-height: 1.4;
+}
+.career-text-2 p{
+	font-size: 2vw;
+	font-weight: var(--font-light);
+}
+html .careers-text-3 h2{
+	font-size: 3.6vw;
+	font-weight: var(--font-light);
+	display: inline-block;
+	border-bottom: 2px solid var(--lightblue-color);
+	padding-bottom: 10px;
+}
+.careers-text-3 p{
+	font-size: 1.5vw;
+	font-weight: var(--font-light);
+	margin: 70px 0 50px 0;
+	color: #403f41;
+	padding-right: 270px;
+}
+.career-aplly-btn{
+	border: 1px solid var(--lightblue-color);
+	border-radius: 100px;
+	font-weight: var(--font-light) !important;
+}
+
+
+/* ------------------- Footer section start ---------------------- */
+
+.footer-logo{
+	width: 200px;
+}
+.footer-logo img{
+	max-width: 100%;
+}
+#footer .hr {
+	margin: 35px 0 !important;
+}
+html .footer-menu h4{
+	font-size: 1.3vw;
+	font-weight: var(--font-light);
+	color: #58595a;
+}
+.footer-menu li a{
+	color: #ccc;
+	font-size: 0.9vw;
+	font-weight: var(--font-light);
+}
+.footer-links{
+	padding-bottom: 30px;
+}
+.footer-links a{
+	color: #ccc;
+	font-size: 14px;
+	font-weight: var(--font-light);
+	margin-right: 10px;
+}
+.footer-email-input{
+	background: transparent;
+	border: 1px solid white;
+	color: white;
+}
+.follow-me-text{
+	margin-top: 55px !important;
+	font-size: 37px !important;
+}
+.input-group span{
+	width: 3rem;
+	padding-left: 9.5px;
+	line-height: 46px;
+
+}
+.social-btns{
+	color: var(--btn-color);
+}
+.social-btns i{
+	color: var(--btn-color);
+	font-size: 20px;
+}
+.btn-social-icon{
+	border-radius: 50%;
+	margin-right: 25px;
+}
+
+.btn-social-icon {
+	border-radius: 50%;
+	margin-right: 25px;
+	border: solid 1px #ccc;
+	height: 45px;
+	width: 45px;
+	text-align: center;
+	padding: 0;
+	line-height: 52px;
+}
+
+/* ---------------------------------almost completed-------------------------------------------- */
+
+
+
+
+
+
+
+
+
